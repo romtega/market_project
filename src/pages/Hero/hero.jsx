@@ -2,20 +2,22 @@ import "./hero.css";
 
 function Hero() {
   return (
-    <section className="hero">
-      <div className="container">
+    <section className="hero bg-accent">
+      <div className="hero__container grid">
         <div className="hero__img">
-          <img src="#" alt="" />
+          <img src="./src/assets/react.svg" alt="" />
         </div>
-        <div className="hero__cta">
-          <div className="hero__cta--title">Titulo</div>
-          <div className="hero__cta--description">Lorem ipsum dolor</div>
-          <div className="hero__cta--btn">
-            <button>Bienvenido</button>
-          </div>
+        <div className="hero__cta grid">
+          <h1 className="hero__title uppercase fs-900">un titulo central</h1>
+          <p className="hero__desciption fs-300">Lorem ipsum dolor</p>
+
+          <button className="hero__btn flex bg-primary text-white letter-spacing-2 fw-2">
+            Bienvenido
+            <i className="fa-solid fa-circle-chevron-right"></i>
+          </button>
         </div>
         <div className="hero__img">
-          <img src="#" alt="" />
+          <img src="./src/assets/react.svg" alt="" />
         </div>
       </div>
     </section>

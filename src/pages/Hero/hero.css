@@ -1,0 +1,26 @@
+.hero {
+}
+
+.hero__container {
+  --gap: 0.4rem;
+  padding: 2rem 4rem;
+  border: 1px solid black;
+  grid-template-columns: 1fr 2fr 1fr;
+  place-items: center;
+  min-height: 87vh;
+}
+
+.hero__cta {
+  text-align: center;
+}
+
+.hero__btn {
+  --gap: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 50%;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  border-radius: 100vw;
+}
