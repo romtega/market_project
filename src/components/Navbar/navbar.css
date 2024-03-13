@@ -1,0 +1,38 @@
+.navbar {
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 15rem;
+}
+
+.navbar__user {
+  --gap: 2rem;
+  align-items: center;
+}
+
+.navbar__search {
+  border: 1px solid green;
+  border-radius: 50vw;
+  padding-inline: 1.4rem;
+}
+
+.navbar__form {
+}
+.navbar__input {
+  border: none;
+  border-right: 1px solid hsl(var(--clr-primary));
+  min-height: 3rem;
+  background-color: transparent;
+}
+
+.navbar__input::placeholder {
+}
+.navbar__btn {
+  background-color: green;
+
+  border: none;
+}
+
+.navbar__icon {
+  border-radius: 50%;
+  padding: 0.8rem;
+}
