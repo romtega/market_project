@@ -1,13 +1,12 @@
 .hero {
+  --gap: 0.4rem;
+  padding: 2rem 4rem;
+  grid-template-columns: 1fr 2fr 1fr;
+  place-items: center;
+  min-height: 90vh;
 }
 
 .hero__container {
-  --gap: 0.4rem;
-  padding: 2rem 4rem;
-  border: 1px solid black;
-  grid-template-columns: 1fr 2fr 1fr;
-  place-items: center;
-  min-height: 87vh;
 }
 
 .hero__cta {

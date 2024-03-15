@@ -1,18 +1,20 @@
 import { useState } from "react";
+
 import "./navbar.css";
 
-function Navbar() {
+function Navbar({ handleAddItems }) {
   const [navbarSearch, setNavbarSearch] = useState("");
+
+  const handleInput = (e) => {
+    setNavbarSearch(e.target.value);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!navbarSearch) return;
-    console.log("Funciona: ", navbarSearch);
+    console.log(navbarSearch);
+    handleAddItems(navbarSearch);
     setNavbarSearch("");
-  };
-
-  const handleInput = (e) => {
-    setNavbarSearch(e.target.value);
   };
 
   return (
@@ -22,7 +24,9 @@ function Navbar() {
         role="list"
       >
         <li className="navbar__item">
-          <div className="navbar__logo">Logo</div>
+          <div className="navbar__logo">
+            <a href="#">Logo</a>
+          </div>
         </li>
         <li className="navbar__item">
           <a href="">Mas Buscados</a>
@@ -41,24 +45,24 @@ function Navbar() {
         <li className="navbar__search bg-white">
           <form className="navbar__form flex" onSubmit={handleSubmit}>
             <input
-              className="navbar__input letter-spacing-3"
+              className="navbar__input"
               type="text"
-              placeholder="Busca un producto"
+              placeholder="Buscar un producto"
               value={navbarSearch}
               onChange={handleInput}
             />
-            <button type="submit" className="navbar__btn bg-secondary">
+            <button type="submit" className="navbar__btn">
               <i className="fa-solid fa-magnifying-glass"></i>
             </button>
           </form>
         </li>
-        <li className="navbar__icon bg-accent">
+        <li className="navbar__icon bg-white">
           <i className="fa-regular fa-user d-block"></i>
         </li>
-        <li className="navbar__icon bg-accent">
+        <li className="navbar__icon bg-white">
           <i className="fa-regular fa-heart d-block"></i>
         </li>
-        <li className="navbar__icon bg-accent">
+        <li className="navbar__icon bg-white">
           <i className="fa-solid fa-cart-shopping d-block"></i>
         </li>
         <li className="navbar__total text-white uppercase">Total</li>
